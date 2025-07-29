@@ -1,3 +1,4 @@
+/** @type {import('jest').Config} */
 module.exports = {
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
@@ -5,19 +6,21 @@ module.exports = {
     '<rootDir>/node_modules/',
     '<rootDir>/dist/'
   ],
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.spec.json',
-      stringifyContentPathRegex: '\\.html$'
-    }
+  moduleNameMapper: {
+    '^src/(.*)$': '<rootDir>/src/$1'
   },
+  transform: {
+    '^.+\\.(ts|js|mjs|html)$': ['jest-preset-angular', {
+      tsconfig: '<rootDir>/tsconfig.spec.json',
+      stringifyContentPathRegex: '\\.(html|svg)$',
+      useESM: true,
+    }],
+  },
+  moduleFileExtensions: ['ts', 'html', 'js', 'json', 'mjs'],
   coverageDirectory: 'coverage',
   collectCoverageFrom: [
     'src/app/**/*.ts',
     '!src/app/**/*.module.ts',
     '!src/app/**/*.spec.ts'
-  ],
-  moduleNameMapper: {
-    '^src/(.*)$': '<rootDir>/src/$1'
-  }
+  ]
 };
