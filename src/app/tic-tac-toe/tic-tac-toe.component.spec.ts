@@ -8,11 +8,8 @@ describe('TicTacToeComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ TicTacToeComponent ]
-    })
-    .compileComponents();
-  });
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(TicTacToeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -24,8 +21,8 @@ describe('TicTacToeComponent', () => {
 
   it('should initialize with empty board', () => {
     expect(component.squares.length).toBe(9);
-    expect(component.squares.every(square => square === null)).toBeTruthy();
-    expect(component.xIsNext).toBeTruthy();
+    expect(component.squares.every(square => square === null)).toBe(true);
+    expect(component.xIsNext).toBe(true);
     expect(component.winner).toBeNull();
   });
 
@@ -37,7 +34,7 @@ describe('TicTacToeComponent', () => {
     it('should make a move at the specified position', () => {
       component.makeMove(0);
       expect(component.squares[0]).toBe('X');
-      expect(component.xIsNext).toBeFalse();
+      expect(component.xIsNext).toBe(false);
     });
 
     it('should not allow move on occupied position', () => {
@@ -94,8 +91,8 @@ describe('TicTacToeComponent', () => {
       component.restartGame();
       
       // Verify reset state
-      expect(component.squares.every(square => square === null)).toBeTruthy();
-      expect(component.xIsNext).toBeTruthy();
+      expect(component.squares.every(square => square === null)).toBe(true);
+      expect(component.xIsNext).toBe(true);
       expect(component.winner).toBeNull();
     });
   });
