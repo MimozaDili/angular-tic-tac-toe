@@ -1,27 +1,119 @@
-# MyAngularApp
+# Angular Tic-tac-toe Game
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+A simple Tic-tac-toe game built with Angular 19.2.0, featuring Jest for testing.
 
-## Development server
+## Project Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project is a classic Tic-tac-toe implementation where:
+- Two players (X and O) take turns
+- The game detects winning combinations
+- Players can restart the game at any time
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js (Latest LTS version recommended)
+- npm or yarn package manager
 
-## Build
+## Technical Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Framework**: Angular ~19.2.0
+- **Testing**: Jest ^29.7.0
+- **Language**: TypeScript ~5.8.0
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
+```bash
+git clone https://github.com/MimozaDili/angular-tic-tac-toe.git
+```
 
-## Running end-to-end tests
+2. Navigate to the project directory:
+```bash
+cd angular-tic-tac-toe
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Install dependencies:
+```bash
+npm install
+```
 
-## Further help
+## Available Scripts
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+In the project directory, you can run:
+
+- `npm start` - Runs the app in development mode. Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
+- `npm test` - Launches the Jest test runner
+- `npm run test:watch` - Runs tests in watch mode
+- `npm run build` - Builds the app for production to the `dist` folder
+- `npm run watch` - Builds the app in watch mode for development
+
+## Testing
+
+The project uses Jest for testing. Test files are located next to the components they test with the `.spec.ts` extension.
+
+To run tests:
+```bash
+npm test
+```
+
+For continuous testing during development:
+```bash
+npm run test:watch
+```
+
+## Project Structure
+
+```
+my-angular-app/
+├── src/
+│   ├── app/
+│   │   ├── tic-tac-toe/
+│   │   │   ├── tic-tac-toe.component.ts
+│   │   │   ├── tic-tac-toe.component.spec.ts
+│   │   │   ├── tic-tac-toe.component.html
+│   │   │   └── tic-tac-toe.component.css
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   └── app-routing.module.ts
+│   ├── assets/
+│   └── environments/
+├── jest.config.js
+├── package.json
+└── tsconfig.json
+```
+
+## Dependencies
+
+### Main Dependencies
+- @angular/animations: ~19.2.0
+- @angular/common: ~19.2.0
+- @angular/compiler: ~19.2.0
+- @angular/core: ~19.2.0
+- @angular/forms: ~19.2.0
+- @angular/platform-browser: ~19.2.0
+- @angular/platform-browser-dynamic: ~19.2.0
+- @angular/router: ~19.2.0
+- rxjs: ~7.8.0
+- zone.js: ~0.15.0
+
+### Development Dependencies
+- Jest: ^29.7.0
+- jest-preset-angular: ^13.1.6
+- ts-jest: ^29.4.0
+- TypeScript: ~5.8.0
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+Mimoza Dili
