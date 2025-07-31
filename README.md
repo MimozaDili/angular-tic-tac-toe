@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Important: Clean Install When Switching Branches
+
+When switching branches, especially if you encounter errors or dependency issues, it is recommended to clean your environment:
+
+```sh
+rm -rf node_modules package-lock.json
+npm install
+```
+
+This ensures all dependencies are correctly installed for the current branch.
