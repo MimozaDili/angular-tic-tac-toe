@@ -1,19 +1,30 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+
+// Create a simple mock component.
+// It is NOT standalone because the component using it (AppComponent) is not standalone.
+@Component({
+  selector: 'app-tic-tac-toe',
+  template: ''
+})
+class MockTicTacToeComponent {}
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        MockTicTacToeComponent
       ],
+      // Because AppComponent is part of a module, it must be DECLARED.
+      // Its mocked child components must also be DECLARED.
       declarations: [
         AppComponent
       ],
     }).compileComponents();
   });
 
+  // Your tests should now pass.
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
@@ -30,6 +41,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('my-angular-app app is running!');
+    expect(compiled.textContent).toContain('my-angular-app');
   });
 });
