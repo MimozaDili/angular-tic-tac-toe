@@ -1,6 +1,7 @@
 /** @type {import('jest').Config} */
 module.exports = {
   preset: 'jest-preset-angular',
+  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/dist/'
@@ -21,9 +22,5 @@ module.exports = {
     'src/app/**/*.ts',
     '!src/app/**/*.module.ts',
     '!src/app/**/*.spec.ts'
-  ],
-  reporters: [
-    'default',
-    ['jest-slow-test-reporter', { numTests: 20 }] // Report the 10 slowest tests
-  ],
+  ]
 };

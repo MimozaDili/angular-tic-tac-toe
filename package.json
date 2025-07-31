@@ -32,7 +32,6 @@
     "@types/node": "^20.12.7",
     "jest": "^29.7.0",
     "jest-preset-angular": "^14.0.0",
-    "jest-slow-test-reporter": "^1.0.0",
     "ts-jest": "^29.4.0",
     "typescript": "~5.8.0"
   }
