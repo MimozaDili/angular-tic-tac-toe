@@ -22,5 +22,9 @@ module.exports = {
     'src/app/**/*.ts',
     '!src/app/**/*.module.ts',
     '!src/app/**/*.spec.ts'
-  ]
+  ],
+  reporters: [
+    'default',
+    ['jest-slow-test-reporter', { numTests: 20 }] // Report the 10 slowest tests
+  ],
 };
