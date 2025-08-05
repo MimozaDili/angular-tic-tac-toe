@@ -7,7 +7,7 @@ describe('TicTacToeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TicTacToeComponent ]
+      imports: [ TicTacToeComponent ]
     })
     .compileComponents();
   });

@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { NgOptimizedImage, CommonModule } from '@angular/common';
 
 @Component({
-  standalone: false,
+  standalone: true,
   selector: 'app-tic-tac-toe',
   templateUrl: './tic-tac-toe.component.html',
-  styleUrls: ['./tic-tac-toe.component.css']
+  styleUrls: ['./tic-tac-toe.component.css'],
+  imports: [CommonModule, NgOptimizedImage],
 })
 export class TicTacToeComponent {
   squares: string[] = Array(9).fill(null);
