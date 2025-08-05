@@ -15,12 +15,7 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         MockTicTacToeComponent, AppComponent
-      ],
-      // Because AppComponent is part of a module, it must be DECLARED.
-      // Its mocked child components must also be DECLARED.
-      /*declarations: [
-        AppComponent
-      ],*/
+      ]
     }).compileComponents();
   });
 
