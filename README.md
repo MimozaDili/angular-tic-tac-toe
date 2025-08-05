@@ -1,5 +1,9 @@
 # MyAngularApp
 
+## Project Angular Version
+
+This project uses **Angular CLI version ~19.2.0** and Angular version ~19.2.0 (see package.json for details).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
 ## Development server
