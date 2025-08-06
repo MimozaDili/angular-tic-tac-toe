@@ -1,11 +1,25 @@
+<app-settings (settingsChange)="onSettingsChange($event)"></app-settings>
+
 <div class="board">
   <div *ngFor="let square of squares; let i = index" class="square" (click)="makeMove(i)">
     {{ square }}
   </div>
 </div>
 <div class="info">
+  <label for="playerX">Player X Name:</label>
+  <input type="text" id="playerX" [(ngModel)]="playerXName">
+  <label for="playerO">Player O Name:</label>
+  <input type="text" id="playerO" [(ngModel)]="playerOName">
   <p *ngIf="winner">Winner: {{ winner }}</p>
-  <p *ngIf="!winner">Next Player: {{ player }}</p>
+  <p *ngIf="!winner">{{ "Next Player" | kebabCase }}: {{ player }}</p>
   <button (click)="restartGame()">Restart Game</button>
 </div>
-<div> <img [ngSrc]="'assets/HI_tech.jpg'" width="300" height="200" alt="Angular Logo" /> </div>
+<div class="history">
+  <h3>Game History</h3>
+  <ul>
+    <li *ngFor="let record of history; let i = index">
+      Game {{ i + 1 }}: {{ record }}
+    </li>
+  </ul>
+</div>
+<div> <img [ngSrc]="'assets/HI_tech.jpg'" width="300" height="200" alt="Angular Logo" priority/> </div>

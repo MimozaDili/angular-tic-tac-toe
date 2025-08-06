@@ -1,0 +1,19 @@
+<form (ngSubmit)="submitSettings()">
+  <div>
+    <label for="playerXName">Player X Name:</label>
+    <input id="playerXName" type="text" [(ngModel)]="playerXName" name="playerXName">
+  </div>
+  <div>
+    <label for="markerX">Player X Marker:</label>
+    <input id="markerX" type="text" [(ngModel)]="markerX" name="markerX" maxlength="1">
+  </div>
+  <div>
+    <label for="playerOName">Player O Name:</label>
+    <input id="playerOName" type="text" [(ngModel)]="playerOName" name="playerOName">
+  </div>
+  <div>
+    <label for="markerO">Player O Marker:</label>
+    <input id="markerO" type="text" [(ngModel)]="markerO" name="markerO" maxlength="1">
+  </div>
+  <button type="submit">Apply Settings</button>
+</form>
